@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>420</height>
+    <width>540</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,6 +59,12 @@
    </item>
    <item>
     <widget class="QTextBrowser" name="textBrowserInfo">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>250</height>
+      </size>
+     </property>
      <property name="focusPolicy">
       <enum>Qt::NoFocus</enum>
      </property>

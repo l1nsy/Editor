@@ -94,6 +94,9 @@ MainWindow::MainWindow(QWidget *parent)
     m_autoSaveTimer->setInterval(60 * 1000);
     connect(m_autoSaveTimer, &QTimer::timeout, this, &MainWindow::autoSave);
 
+    // 设置界面属性时文档会被标记为“已修改”，这里恢复为初始的未修改状态
+    m_editor->document()->setModified(false);
+
     updateWindowTitle();
     updateStatusBar();
     updateActions();
