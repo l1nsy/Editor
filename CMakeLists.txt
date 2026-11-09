@@ -49,6 +49,9 @@ endif()
 
 target_link_libraries(TextEditor PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
+# .ui 文件被提升为自定义控件时，uic 生成的 ui_*.h 需要能找到 codeeditor.h
+target_include_directories(TextEditor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
 set_target_properties(TextEditor PROPERTIES
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
